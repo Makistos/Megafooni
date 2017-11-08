@@ -1,0 +1,12 @@
+build/
+.gradle/
+*.iml
+.idea/modules.xml
+.idea/libraries/Gradle*.xml
+.idea/modules
+.idea/modules.xml
+.idea/gradle.xml
+.idea/compiler.xml
+.idea/inspectionProfiles/profiles_settings.xml
+.idea/.name
+.swp
