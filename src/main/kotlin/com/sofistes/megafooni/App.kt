@@ -4,7 +4,6 @@
 
 package com.sofistes.megafooni
 
-import java.net.URL
 import com.beust.klaxon.Parser
 import com.beust.klaxon.JsonObject
 import com.beust.klaxon.JsonArray
@@ -12,8 +11,9 @@ import com.beust.klaxon.JsonArray
 
 
 fun main(args: Array<String>) {
-    val result : StringBuilder = StringBuilder(URL("https://api.huuto.net/1.1/categories").readText())
     val parser: Parser = Parser()
+    val huuto = HuutoApi("https://api.huuto.net/1.1/")
+    val result = huuto.categories("")
     val json: JsonObject = parser.parse(result) as JsonObject
     //println(json.toJsonString(true))
     //val array: JsonArray<Any?> = json["categories"]
@@ -24,29 +24,7 @@ fun main(args: Array<String>) {
     val titles = array[0]["title"]
     array.forEach { println(it["title"])}
     println("$titles")
-    //println("$titles")
-    //val cats = json.
 
 }
 
 
-/**
-public class MegafooniMain {
-    companion object {
-        @JvmStatic fun main(args: Array<String>) {
-            val result = URL("https://api.huuto.net/1.1/categories").readText()
-            print(result)
-            val parser: Parser = Parser()
-            val json: JsonObject = parser.parse(result) as JsonObject
-            //println()
-
-        }
-    }
-    fun parse(name: String): Any? {
-        val cls = Parser::class.java
-        return cls.getResourceAsStream(name)?.let { inputStream ->
-            return Parser().parse(inputStream)
-        }
-    }
-}
- */
