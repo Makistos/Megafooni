@@ -54,6 +54,12 @@ dependencies {
     compile 'com.beust:klaxon:0.30'
 }
 
+jar {
+    manifest {
+        attributes 'Main-Class': 'com.sofistes.megafooni.AppKt'
+    }
+    from { configurations.compile.collect {it.isDirectory() ? it : zipTree(it) } }
+}
 
 compileKotlin {
     kotlinOptions.jvmTarget = "1.8"
