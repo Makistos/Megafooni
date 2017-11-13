@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Megafooni.iml" filepath="$PROJECT_DIR$/.idea/modules/Megafooni.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Megafooni_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Megafooni_main.iml" group="Megafooni" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Megafooni_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Megafooni_test.iml" group="Megafooni" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/klaxon.iml" filepath="$PROJECT_DIR$/.idea/modules/klaxon.iml" group="Megafooni" />
+    </modules>
+  </component>
+</project>
