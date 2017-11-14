@@ -7,9 +7,10 @@ package com.sofistes.megafooni
 import com.beust.klaxon.*
 import java.net.URL
 import com.sofistes.megafooni.HuutoItem
+import kotlin.reflect.full.memberProperties
 
-class HuutoApi(apiRoot: String) {
-    val rootEndpoint = apiRoot
+class HuutoApi() {
+    val rootEndpoint = "https://api.huuto.net/1.1/"
 
     fun categories(categoryNumber: String): StringBuilder =
             StringBuilder(URL(rootEndpoint + "categories/" + categoryNumber + "?max-depth=3").readText())
@@ -26,5 +27,11 @@ class HuutoApi(apiRoot: String) {
         val json: JsonObject = parser.parse(result) as JsonObject
         return newItem(json)
         }
+
+    fun getItems(params: HuutoSearch): StringBuilder {
+        val paramStr = params.searchParams.map { (field, value) -> "&$field=\"$value\""}.joinToString(separator="&", prefix="?")
+        return StringBuilder(URL(rootEndpoint + "items" + paramStr).readText())
+    }
 }
+
 

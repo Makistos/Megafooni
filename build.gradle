@@ -52,6 +52,7 @@ repositories {
 dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib-jre8:$kotlin_version"
     compile 'com.beust:klaxon:0.30'
+    compile 'org.jetbrains.kotlin:kotlin-reflect:1.1.60'
 }
 
 jar {

@@ -14,4 +14,9 @@ data class HuutoCategories(val categories: Array<HuutoCategory>, val id: Int?, v
 
 data class HuutoCategory(val id: Int?, val title: String?, val links: Map<String, String>?)
 
-
+/* Parameters that can be used to search through the Huuto.net API. Not all are listed here yet. */
+/*data class HuutoSearch(val addtime: String? = null, val area: String? = null, val category: Int? = null,
+                       val condition: String? = null, val closingtime: String? = null, val price_max: Float? = null,
+                       val price_min: Float? = null, val seller_type: String? = null, val sellstyle: String? = null,
+                       val status: String? = null, val words: String? = null)*/
+data class HuutoSearch(val searchParams: Map<String, String>)
