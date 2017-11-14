@@ -7,7 +7,6 @@ package com.sofistes.megafooni
 import com.beust.klaxon.*
 import java.net.URL
 import com.sofistes.megafooni.HuutoItem
-import kotlin.reflect.full.memberProperties
 
 class HuutoApi() {
     val rootEndpoint = "https://api.huuto.net/1.1/"
